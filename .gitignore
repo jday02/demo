@@ -1,0 +1,11 @@
+TEST/*.*
+!TEST/*.bat
+#*.bat
+archive
+*.pyx
+tests/adpt
+tests/__pycache__
+
+
+commit_errors.txt
+

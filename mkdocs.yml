@@ -34,4 +34,5 @@ markdown_extensions:
 
 nav:
   - "Start": index.md
+  - "Home": home.md
   - "API": api.md

@@ -2,4 +2,4 @@
 
 ## Dpt Class
 
-::: adpt.dpt
+::: adpt.dpt.Dpt

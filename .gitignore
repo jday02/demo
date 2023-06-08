@@ -5,7 +5,7 @@ archive
 *.pyx
 tests/adpt
 tests/__pycache__
-
+site
 
 commit_errors.txt
 

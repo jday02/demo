@@ -1,0 +1,37 @@
+site_name: ADPT
+site_description: "This is a demo of handling class documentation for a python tool."
+
+repo_url: https://github.com/jday02/demo
+repo_name: jday02/demo
+
+theme:
+  icon:
+    repo: fontawesome/brands/github
+  name: "material"
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: "orange"
+      accent: "navy"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: "orange"
+      accent: "green"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - "Start": index.md
+  - "API": api.md

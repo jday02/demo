@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"ADPT","text":"<p>This is a demo of handling class documentation for a python tool.</p>"},{"location":"api/","title":"References","text":""},{"location":"api/#dpt-class","title":"Dpt Class","text":""}]}

@@ -1,0 +1,2 @@
+python adreg.py
+pause

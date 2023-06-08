@@ -1,4 +1,4 @@
 # demo
 
 # Documentation
-View the sample [mkdocs](https://jday02.github.io/demo){:target="_blank"}.
+View the sample [mkdocs](https://jday02.github.io/demo).

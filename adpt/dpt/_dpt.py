@@ -50,6 +50,10 @@ class Dpt:
         FileNotFoundError
             Error: [err]
 
+        Returns
+        -------
+        None
+
         """
         # print("initializing....")
         self.home_dir = os.getcwd()
@@ -84,9 +88,10 @@ class Dpt:
         Exception
             Error: Unexpected ([err])
 
-        Creates
+        Returns
         -------
-        A set of class vars defined in the JSON
+        str
+            The contents of the JSON file
 
         """
 
@@ -119,9 +124,9 @@ class Dpt:
         NameError
             Error: Failed to assign class var [index] ([err])
 
-        Creates
+        Returns
         -------
-        A set of class vars defined in the JSON
+        None
 
         """
 
@@ -162,6 +167,11 @@ class Dpt:
         ----
         int
             Exit passing the error code.
+
+        Returns
+        -------
+        None
+
         """
         self.addlog(errcode)
         self.getlog()
@@ -185,8 +195,9 @@ class Dpt:
 
         Returns
         -------
-        string
+        str
             The full path and file name where the JSON file was found.
+
         """
         if os.path.exists(json_file):
             return json_file
@@ -220,13 +231,10 @@ class Dpt:
 
         Development tool to display diagnostic messages.
 
-        Parameters
-        ----------
-        None
-
         Returns
         -------
         None
+
         """
         for line in self.tlog:
             print(f"{line}")

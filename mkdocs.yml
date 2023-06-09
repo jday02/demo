@@ -28,6 +28,9 @@ plugins:
   - search
   - mkdocstrings
 
+docstring_style:
+  - numpy
+
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences

@@ -21,18 +21,18 @@ import sys
 class Dpt:
     """Data processing tool migration from SAS.
 
-    Parameters
+    Class vars
     ----------
-    current_state_num: int
+    current_state_num : int
         The index of the state machine, set to 0 initially
 
-    json_data: str
+    json_data : str
         The JSON string to be loaded.
 
-    json_file: str
+    json_file : str
         The working path to the JSON file containing json_data
 
-    machine_states: list
+    machine_states : list
         The list of states the machine may take during data processing
     """
 
@@ -57,11 +57,11 @@ class Dpt:
 
         Parameters
         ----------
-        home_dir: string
+        home_dir : string
             The path where the process was started.
-        jfile: string
+        jfile : string
             The validated path and file name for the input JSON file.
-        input_json: string
+        input_json : string
             The class var containing the JSON file path found.
 
         Raises
@@ -92,10 +92,10 @@ class Dpt:
         """Read the __init__ JSON file.
         Parameters
         ----------
-        json_file: str
+        json_file : str
             The JSON file to be read containing class vars to be created.
 
-        jfp: file pointer
+        jfp : file pointer
             File pointer to the JSON file containing class vars to be created.
 
         Raises
@@ -171,7 +171,7 @@ class Dpt:
 
         Parameters
         ----------
-        errcode: str
+        errcode : str
             Exit and provide the error code. Default 0, no error.
 
         Exit
@@ -191,7 +191,7 @@ class Dpt:
 
         Parameters
         ----------
-        json_file: str
+        json_file : str
             The location of the JSON file passed to the class. Format: <path>/file_name
 
         Raises
@@ -221,7 +221,7 @@ class Dpt:
 
         Parameters
         ----------
-        msg: str
+        msg : str
             A string for the message to be appended to tlog
 
         Returns
@@ -239,9 +239,9 @@ class Dpt:
 
         Parameters
         ----------
-        tlog: list
+        tlog : list
             Public class var containing strings, diagnostic tool for dev.
-        line: string
+        line : string
             An item from tlog.
 
         Returns

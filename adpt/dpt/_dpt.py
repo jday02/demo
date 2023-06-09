@@ -19,27 +19,7 @@ import sys
 
 
 class Dpt:
-    """Data processing tool migration from SAS.
-
-    Variables for the class
-
-    Class variables
-    ---------------
-    current_state_num : int
-        The index of the state machine, set to 0 initially
-
-    json_data : str
-        The JSON string to be loaded.
-
-    json_file : str
-        The working path to the JSON file containing json_data
-
-    machine_states : list
-        The list of states the machine may take during data processing
-
-    tlog : list
-        Place to log diagnostic messages.
-    """
+    """Data processing tool migration from SAS."""
 
     current_state_num = 0
     json_data = ""

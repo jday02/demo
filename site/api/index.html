@@ -323,8 +323,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adpt.dpt.Dpt--parameters" class="md-nav__link">
-    Parameters
+  <a href="#adpt.dpt.Dpt--class-vars" class="md-nav__link">
+    Class vars
   </a>
   
 </li>
@@ -580,8 +580,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adpt.dpt.Dpt--parameters" class="md-nav__link">
-    Parameters
+  <a href="#adpt.dpt.Dpt--class-vars" class="md-nav__link">
+    Class vars
   </a>
   
 </li>
@@ -817,21 +817,21 @@
 
   
       <p>Data processing tool migration from SAS.</p>
-<h3 id="adpt.dpt.Dpt--parameters">Parameters</h3>
+<h3 id="adpt.dpt.Dpt--class-vars">Class vars</h3>
 
-<details class="current_state_num" open>
+<details class="current_state_num-" open>
   <summary>int</summary>
   <p>The index of the state machine, set to 0 initially</p>
 </details>
-<details class="json_data" open>
+<details class="json_data-" open>
   <summary>str</summary>
   <p>The JSON string to be loaded.</p>
 </details>
-<details class="json_file" open>
+<details class="json_file-" open>
   <summary>str</summary>
   <p>The working path to the JSON file containing json_data</p>
 </details>
-<details class="machine_states" open>
+<details class="machine_states-" open>
   <summary>list</summary>
   <p>The list of states the machine may take during data processing</p>
 </details>
@@ -1072,18 +1072,18 @@
 <span class="normal">252</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Dpt</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Data processing tool migration from SAS.</span>
 
-<span class="sd">    Parameters</span>
+<span class="sd">    Class vars</span>
 <span class="sd">    ----------</span>
-<span class="sd">    current_state_num: int</span>
+<span class="sd">    current_state_num : int</span>
 <span class="sd">        The index of the state machine, set to 0 initially</span>
 
-<span class="sd">    json_data: str</span>
+<span class="sd">    json_data : str</span>
 <span class="sd">        The JSON string to be loaded.</span>
 
-<span class="sd">    json_file: str</span>
+<span class="sd">    json_file : str</span>
 <span class="sd">        The working path to the JSON file containing json_data</span>
 
-<span class="sd">    machine_states: list</span>
+<span class="sd">    machine_states : list</span>
 <span class="sd">        The list of states the machine may take during data processing</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -1108,11 +1108,11 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        home_dir: string</span>
+<span class="sd">        home_dir : string</span>
 <span class="sd">            The path where the process was started.</span>
-<span class="sd">        jfile: string</span>
+<span class="sd">        jfile : string</span>
 <span class="sd">            The validated path and file name for the input JSON file.</span>
-<span class="sd">        input_json: string</span>
+<span class="sd">        input_json : string</span>
 <span class="sd">            The class var containing the JSON file path found.</span>
 
 <span class="sd">        Raises</span>
@@ -1143,10 +1143,10 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read the __init__ JSON file.</span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        json_file: str</span>
+<span class="sd">        json_file : str</span>
 <span class="sd">            The JSON file to be read containing class vars to be created.</span>
 
-<span class="sd">        jfp: file pointer</span>
+<span class="sd">        jfp : file pointer</span>
 <span class="sd">            File pointer to the JSON file containing class vars to be created.</span>
 
 <span class="sd">        Raises</span>
@@ -1222,7 +1222,7 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        errcode: str</span>
+<span class="sd">        errcode : str</span>
 <span class="sd">            Exit and provide the error code. Default 0, no error.</span>
 
 <span class="sd">        Exit</span>
@@ -1242,7 +1242,7 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        json_file: str</span>
+<span class="sd">        json_file : str</span>
 <span class="sd">            The location of the JSON file passed to the class. Format: &lt;path&gt;/file_name</span>
 
 <span class="sd">        Raises</span>
@@ -1272,7 +1272,7 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        msg: str</span>
+<span class="sd">        msg : str</span>
 <span class="sd">            A string for the message to be appended to tlog</span>
 
 <span class="sd">        Returns</span>
@@ -1290,9 +1290,9 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        tlog: list</span>
+<span class="sd">        tlog : list</span>
 <span class="sd">            Public class var containing strings, diagnostic tool for dev.</span>
-<span class="sd">        line: string</span>
+<span class="sd">        line : string</span>
 <span class="sd">            An item from tlog.</span>
 
 <span class="sd">        Returns</span>
@@ -1332,15 +1332,15 @@
 <p>Create class vars using JSON from file location provided.</p>
 <h4 id="adpt.dpt._dpt.Dpt.__init__--parameters">Parameters</h4>
 
-<details class="home_dir" open>
+<details class="home_dir-" open>
   <summary>string</summary>
   <p>The path where the process was started.</p>
 </details>
-<details class="jfile" open>
+<details class="jfile-" open>
   <summary>string</summary>
   <p>The validated path and file name for the input JSON file.</p>
 </details>
-<details class="input_json" open>
+<details class="input_json-" open>
   <summary>string</summary>
   <p>The class var containing the JSON file path found.</p>
 </details>      <h4 id="adpt.dpt._dpt.Dpt.__init__--raises">Raises</h4>
@@ -1392,11 +1392,11 @@
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    home_dir: string</span>
+<span class="sd">    home_dir : string</span>
 <span class="sd">        The path where the process was started.</span>
-<span class="sd">    jfile: string</span>
+<span class="sd">    jfile : string</span>
 <span class="sd">        The validated path and file name for the input JSON file.</span>
-<span class="sd">    input_json: string</span>
+<span class="sd">    input_json : string</span>
 <span class="sd">        The class var containing the JSON file path found.</span>
 
 <span class="sd">    Raises</span>
@@ -1444,7 +1444,7 @@
 <p>Capture a diagnostic message.</p>
 <h4 id="adpt.dpt._dpt.Dpt.addlog--parameters">Parameters</h4>
 
-<details class="msg" open>
+<details class="msg-" open>
   <summary>str</summary>
   <p>A string for the message to be appended to tlog</p>
 </details>      <h4 id="adpt.dpt._dpt.Dpt.addlog--returns">Returns</h4>
@@ -1474,7 +1474,7 @@
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    msg: str</span>
+<span class="sd">    msg : str</span>
 <span class="sd">        A string for the message to be appended to tlog</span>
 
 <span class="sd">    Returns</span>
@@ -1506,7 +1506,7 @@
 home_dir to the front of the path and recheck.</p>
 <h4 id="adpt.dpt._dpt.Dpt.check_json--parameters">Parameters</h4>
 
-<details class="json_file" open>
+<details class="json_file-" open>
   <summary>str</summary>
   <p>The location of the JSON file passed to the class. Format: <path>/file_name</p>
 </details>      <h4 id="adpt.dpt._dpt.Dpt.check_json--raises">Raises</h4>
@@ -1555,7 +1555,7 @@ home_dir to the front of the path and recheck.</p>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    json_file: str</span>
+<span class="sd">    json_file : str</span>
 <span class="sd">        The location of the JSON file passed to the class. Format: &lt;path&gt;/file_name</span>
 
 <span class="sd">    Raises</span>
@@ -1599,7 +1599,7 @@ home_dir to the front of the path and recheck.</p>
 <p>Try to end gracefully, and provide an error code.</p>
 <h4 id="adpt.dpt._dpt.Dpt.end--parameters">Parameters</h4>
 
-<details class="errcode" open>
+<details class="errcode-" open>
   <summary>str</summary>
   <p>Exit and provide the error code. Default 0, no error.</p>
 </details>      <h4 id="adpt.dpt._dpt.Dpt.end--exit">Exit</h4>
@@ -1632,7 +1632,7 @@ home_dir to the front of the path and recheck.</p>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    errcode: str</span>
+<span class="sd">    errcode : str</span>
 <span class="sd">        Exit and provide the error code. Default 0, no error.</span>
 
 <span class="sd">    Exit</span>
@@ -1666,11 +1666,11 @@ home_dir to the front of the path and recheck.</p>
 optionally at the end.</p>
 <h4 id="adpt.dpt._dpt.Dpt.getlog--parameters">Parameters</h4>
 
-<details class="tlog" open>
+<details class="tlog-" open>
   <summary>list</summary>
   <p>Public class var containing strings, diagnostic tool for dev.</p>
 </details>
-<details class="line" open>
+<details class="line-" open>
   <summary>string</summary>
   <p>An item from tlog.</p>
 </details>      <h4 id="adpt.dpt._dpt.Dpt.getlog--returns">Returns</h4>
@@ -1704,9 +1704,9 @@ optionally at the end.</p>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    tlog: list</span>
+<span class="sd">    tlog : list</span>
 <span class="sd">        Public class var containing strings, diagnostic tool for dev.</span>
-<span class="sd">    line: string</span>
+<span class="sd">    line : string</span>
 <span class="sd">        An item from tlog.</span>
 
 <span class="sd">    Returns</span>
@@ -1867,11 +1867,11 @@ NameError
 Parameters</p>
 <hr />
 
-<details class="json_file" open>
+<details class="json_file-" open>
   <summary>str</summary>
   <p>The JSON file to be read containing class vars to be created.</p>
 </details>
-<details class="jfp" open>
+<details class="jfp-" open>
   <summary>file pointer</summary>
   <p>File pointer to the JSON file containing class vars to be created.</p>
 </details>      <h4 id="adpt.dpt._dpt.Dpt.read_json--raises">Raises</h4>
@@ -1913,10 +1913,10 @@ Parameters</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Read the __init__ JSON file.</span>
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    json_file: str</span>
+<span class="sd">    json_file : str</span>
 <span class="sd">        The JSON file to be read containing class vars to be created.</span>
 
-<span class="sd">    jfp: file pointer</span>
+<span class="sd">    jfp : file pointer</span>
 <span class="sd">        File pointer to the JSON file containing class vars to be created.</span>
 
 <span class="sd">    Raises</span>

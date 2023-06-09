@@ -21,8 +21,10 @@ import sys
 class Dpt:
     """Data processing tool migration from SAS.
 
-    Class vars
-    ----------
+    Variables for the class
+
+    Class variables
+    ---------------
     current_state_num : int
         The index of the state machine, set to 0 initially
 
@@ -34,6 +36,9 @@ class Dpt:
 
     machine_states : list
         The list of states the machine may take during data processing
+
+    tlog : list
+        Place to log diagnostic messages.
     """
 
     current_state_num = 0
@@ -57,12 +62,8 @@ class Dpt:
 
         Parameters
         ----------
-        home_dir : string
+        json_file : str
             The path where the process was started.
-        jfile : string
-            The validated path and file name for the input JSON file.
-        input_json : string
-            The class var containing the JSON file path found.
 
         Raises
         ------
@@ -90,13 +91,13 @@ class Dpt:
 
     def read_json(self, json_file: str) -> str:
         """Read the __init__ JSON file.
+
+        Extract the contents of the JSON file.
+
         Parameters
         ----------
         json_file : str
             The JSON file to be read containing class vars to be created.
-
-        jfp : file pointer
-            File pointer to the JSON file containing class vars to be created.
 
         Raises
         ------
@@ -118,11 +119,14 @@ class Dpt:
             return ""
 
     def load_json(self, jdata: str) -> None:
-        """Load the data from text read from the JSON file.
+        """Load the data from the JSON file.
+
+        Parse the JSON text to create class variables.
+
         Parameters
         ----------
         jdata: str
-            The raw JSON text read from the file containing class vars to be created.
+            The raw JSON text.
 
         Raises
         ------
@@ -234,15 +238,11 @@ class Dpt:
     def getlog(self) -> None:
         """Diagnostic log for dev.
 
-        Development tool to collect diagnosting messages for reading
-        optionally at the end.
+        Development tool to display diagnostic messages.
 
         Parameters
         ----------
-        tlog : list
-            Public class var containing strings, diagnostic tool for dev.
-        line : string
-            An item from tlog.
+        None
 
         Returns
         -------

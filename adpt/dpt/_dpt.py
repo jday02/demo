@@ -12,6 +12,7 @@ import json
 import os
 import sys
 
+
 # import typing
 # import re
 # import pandas as pd
@@ -20,10 +21,16 @@ import sys
 class Dpt:
     """Data processing tool migration from SAS.
 
-    State Machine
-    -------------
+    Parameters
+    ----------
     current_state_num: int
         The index of the state machine, set to 0 initially
+
+    json_data: str
+        The JSON string to be loaded.
+
+    json_file: str
+        The working path to the JSON file containing json_data
 
     machine_states: list
         The list of states the machine may take during data processing
@@ -69,8 +76,8 @@ class Dpt:
 
         jfile = self.check_json(json_file)
 
-        if jfile is None:
-            print(f"Error: JSON file {json_file} not found")
+        if jfile == "":
+            print(f"Error: JSON file {self.json_file} not found")
             return None
 
         self.input_json = jfile
@@ -104,8 +111,8 @@ class Dpt:
 
         try:
             print(f"open {json_file}")
-            jfp = open(json_file, encoding="utf-8", mode="r")
-            return jfp.read()
+            with open(json_file, encoding="utf-8") as jfp:
+                return jfp.read()
         except Exception as err:
             print(f"Error: Unexpected ({err})")
             return ""
@@ -149,7 +156,7 @@ class Dpt:
             print(f"Error: unspecified ({err})")
             self.end("E2")
 
-        for k in dat.keys():
+        for k in dat:
             # self.tlog.append(f"self.{k} = dat[\"{k}\"]")
             try:
                 exec(f'self.{k} = dat["{k}"]')

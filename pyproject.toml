@@ -137,7 +137,7 @@ lines_after_imports = 2
 force_single_line = true
 use_parentheses = true
 ensure_newline_before_comments = true
-line_length = 80
+line_length = 88
 include_trailing_comma = true
 skip_glob = [
   "docs/*",
@@ -191,7 +191,7 @@ extend-select = ["W", "N", "UP", "B", "A", "C4", "PT", "SIM", "PD", "PLE", "RUF"
 ignore = ["SIM300"]
 fixable = ["F", "E", "W", "UP", "B", "A", "C4"]
 unfixable = []
-line-length = 80
+line-length = 88
 extend-exclude = ["tests", "test"]
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 [tool.ruff.isort]
